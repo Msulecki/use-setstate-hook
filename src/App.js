@@ -17,14 +17,20 @@ function App() {
   const keys = Object.keys(state);
   const object = <ul>{keys.map(key => <li key={key}>{`${key}: ${state[key]}`}</li>)}</ul>
 
+  const handleCallback = (val) => {
+    console.log('handleCallback value:', val);
+    return val;
+  }
+
   const handleUpdate = () => {
     try {
       const parsedInput = JSON.parse(input);
-      setState(parsedInput);
+      setState(parsedInput, () => handleCallback("some value"));
       setInput("");
       error && setError("");
     }
     catch (error) {
+      console.error(error);
       setError(error.name);
     }
   }
