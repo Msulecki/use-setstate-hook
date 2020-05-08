@@ -6,7 +6,7 @@ Custom hook with ability to update objects, just like this.setState
 ### Installation
 Clone this repo:
 ```
-git clone git@github.com:Squarespace/use-setstate-hook.git
+git clone https://github.com/Msulecki/use-setstate-hook.git
 ```
 Instal dependencies:
 ```
